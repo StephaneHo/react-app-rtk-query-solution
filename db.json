@@ -1,18 +1,93 @@
 {
-  "music": [],
-  "cats": [],
-  "books": [
+  "rentalCategories": [
     {
-      "title": "Hunger Games",
+      "name": "Outillage professionnel",
+      "id": 1
+    },
+    {
+      "name": "test",
       "id": 2
     },
     {
-      "title": "L'alchimiste",
+      "name": "test2",
       "id": 3
     },
     {
-      "title": "Le pays ou l'on n'arrive jamais",
+      "name": "test3",
       "id": 4
+    },
+    {
+      "name": "test4",
+      "id": 5
+    },
+    {
+      "name": "test5",
+      "id": 6
+    },
+    {
+      "name": "test sub cat",
+      "id": 7
+    }
+  ],
+  "rentalSubCategories": [
+    {
+      "id": 1,
+      "name": "Outils decoupe et percage",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Outils decoupe et percage NEW",
+      "categoryId": 2
+    },
+    {
+      "categoryId": 1,
+      "id": 3
+    },
+    {
+      "categoryId": 1,
+      "id": 4
+    },
+    {
+      "categoryId": 2,
+      "id": 5
+    },
+    {
+      "categoryId": 2,
+      "id": 6
+    },
+    {
+      "categoryId": 1,
+      "id": 7
+    },
+    {
+      "categoryId": 1,
+      "id": 8
+    },
+    {
+      "categoryId": 1,
+      "name": "rwar",
+      "id": 9
+    },
+    {
+      "categoryId": 1,
+      "name": "test subCqt",
+      "id": 10
+    },
+    {
+      "categoryId": 1,
+      "name": "test33",
+      "id": 11
+    },
+    {
+      "categoryId": 1,
+      "name": "est55",
+      "id": 12
+    },
+    {
+      "categoryId": 1,
+      "name": "test333",
+      "id": 13
     }
   ]
 }
