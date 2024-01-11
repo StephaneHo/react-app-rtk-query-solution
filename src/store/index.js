@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { rentalCategoriesSlice } from "./slices/rentalCategoriesSlice";
+
 import { rentalSubCategoriesApi } from "./apis/rentalSubCategoriesApi";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { rentalCategoriesApi } from "./apis/rentalCategoriesApi";
@@ -18,13 +18,15 @@ export const store = configureStore({
 
 setupListeners(store.dispatch);
 
-export const { addRentalCategory, removeRentalCategory } =
-  rentalCategoriesSlice.actions;
+window.store = store;
+
 export {
   useFetchRentalSubCategoriesQuery,
   useAddRentalSubCategoryMutation,
+  useDeleteRentalSubCategoryMutation,
 } from "./apis/rentalSubCategoriesApi";
 export {
   useFetchRentalCategoriesQuery,
   useAddRentalCategoryMutation,
+  useDeleteRentalCategoryMutation,
 } from "./apis/rentalCategoriesApi";

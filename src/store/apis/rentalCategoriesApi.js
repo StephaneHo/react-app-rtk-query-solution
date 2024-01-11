@@ -30,10 +30,22 @@ const rentalCategoriesApi = createApi({
           };
         },
       }),
+      deleteRentalCategory: builder.mutation({
+        invalidatesTags: ["RentalCategory"],
+        query: (rentalCategory) => {
+          return {
+            url: "/rentalCategories/" + rentalCategory.id,
+            method: "DELETE",
+          };
+        },
+      }),
     };
   },
 });
 
-export const { useFetchRentalCategoriesQuery, useAddRentalCategoryMutation } =
-  rentalCategoriesApi;
+export const {
+  useFetchRentalCategoriesQuery,
+  useAddRentalCategoryMutation,
+  useDeleteRentalCategoryMutation,
+} = rentalCategoriesApi;
 export { rentalCategoriesApi };

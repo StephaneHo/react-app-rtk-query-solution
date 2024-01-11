@@ -18,7 +18,6 @@ const rentalSubCategoriesApi = createApi({
           return [{ type: "RentalSubCategory", id: rentalCategoryId }];
         },
         query: ({ rentalCategoryId, rentalSubCategoryName }) => {
-          console.log("rentalSubCategoryName", rentalSubCategoryName);
           return {
             url: "/rentalSubCategories",
             method: "POST",
@@ -43,6 +42,21 @@ const rentalSubCategoriesApi = createApi({
           };
         },
       }),
+      deleteRentalSubCategory: builder.mutation({
+        invalidatesTags: (
+          result,
+          error,
+          { rentalCategoryId, rentalSubCategoryName }
+        ) => {
+          return [{ type: "RentalSubCategory", id: rentalCategoryId }];
+        },
+        query: (rentalSubCategory) => {
+          return {
+            url: "/rentalSubCategories/" + rentalSubCategory.id,
+            method: "DELETE",
+          };
+        },
+      }),
     };
   },
 });
@@ -50,5 +64,6 @@ const rentalSubCategoriesApi = createApi({
 export const {
   useFetchRentalSubCategoriesQuery,
   useAddRentalSubCategoryMutation,
+  useDeleteRentalSubCategoryMutation,
 } = rentalSubCategoriesApi;
 export { rentalSubCategoriesApi };
